@@ -1,0 +1,77 @@
+/* App.css */
+
+/* 메뉴 토글 버튼 */
+.menu-toggle-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* 사이드 메뉴 */
+.side-menu {
+  width: 250px;
+  background-color: #b4b4b4;
+  position: fixed;
+  top: 110px; /* 헤더 아래로 60px */
+  left: -250px; /* 사이드 메뉴가 화면 밖에 시작 */
+  height: calc(90vh - 60px - 50px); /* 화면 높이에서 헤더 60px과 푸터 높이 50px 제외 */
+  transition: left 0.3s ease;
+  z-index: 999;
+  border-top-right-radius: 15px; /* 오른쪽 상단 모서리 둥글게 */
+  border-bottom-right-radius: 15px; /* 오른쪽 하단 모서리 둥글게 */
+  padding-bottom: 20px; /* 사이드 메뉴 아래 여백을 추가하여 푸터와 겹치지 않게 */
+}
+
+.side-menu.open {
+  left: 0; /* 열렸을 때 왼쪽으로 슬라이드 */
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 10px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu li a:hover {
+  background-color: #ddd;
+}
+
+/* 본문 내용 */
+.content {
+  
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+
+/* Header */
+.header {
+  text-align: center;
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  bottom: 0;
+}
